@@ -34,7 +34,7 @@ const SkillsSection = () => {
     <section
       ref={sectionRef}
       id="skills"
-      className={`py-24 px-6 ${isDarkMode ? "bg-gray-950 text-white" : "bg-gray-50 text-gray-900"
+      className={`py-16 px-6 ${isDarkMode ? "bg-gray-950 text-white" : "bg-gray-50 text-gray-900"
         } relative overflow-hidden`}
     >
       {/* Background Elements */}
@@ -190,8 +190,8 @@ const SkillsSection = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={containerVariants}
-            className='mt-20 grid grid-cols-2 md:grid-cols-3 uppercase'
-            >  {/* yaha pe change kiye hai gap hata diye hai  */}
+            className='mt-16 grid grid-cols-1 md:grid-cols-3 uppercase gap-6'
+            >  
             
               {STATS.map((stat, index) => (
                 <motion.div
@@ -199,7 +199,7 @@ const SkillsSection = () => {
                   variants={itemVariants}
                   className='text-center'
                   >
-                    <div className="text-2xl md:text-3xl font-light text-blue-500 mb-2">
+                    <div className="text-2xl md:text-3xl font-light text-blue-500 ">
                       {stat.number}
                     </div>
                     <div 

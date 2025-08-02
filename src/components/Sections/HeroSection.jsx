@@ -4,7 +4,6 @@ import { ArrowDown, Mail } from "lucide-react";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { useTheme } from "../../context/ThemeContext";
 
-
 import { containerVariants, itemVariants } from "../../utils/helper.cjs";
 
 const HeroSection = () => {
@@ -32,7 +31,17 @@ const HeroSection = () => {
     },
   };
 
-  
+  const cardColors = {
+    bg: isDarkMode ? "bg-zinc-900" : "bg-white",
+    border: isDarkMode ? "border-zinc-700" : "border-gray-200",
+    text: isDarkMode ? "text-zinc-500" : "text-gray-500",
+    const: isDarkMode ? "text-pink-400" : "text-pink-600",
+    developer: isDarkMode ? "text-blue-400" : "text-blue-600",
+    operator: isDarkMode ? "text-zinc-500" : "text-gray-500",
+    curly: isDarkMode ? "text-orange-400" : "text-orange-500",
+    key: isDarkMode ? "text-purple-400" : "text-purple-600",
+    value: isDarkMode ? "text-green-400" : "text-green-600",
+  };
 
   return (
     <div
@@ -79,7 +88,6 @@ const HeroSection = () => {
 
         <div className="max-w-7xl mx-auto w-full z-10 mt-20">
           {/* Mobile Layout - Centered */}
-
           <div className="block lg:hidden">
             <motion.div
               initial="hidden"
@@ -192,140 +200,150 @@ const HeroSection = () => {
                 ))}
               </motion.div>
 
-              {/* developer.js - Mobile */}
-              <motion.div
-  className="w-full max-w-[95vw] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl flex justify-center items-center px-4 md:px-6 py-6 md:py-10"
-  initial={{ opacity: 0, x: 50 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{
-    duration: 0.8,
-    delay: 1.2,
-    type: "spring",
-    stiffness: 100,
-  }}
->
-  <div className="relative">
-    <motion.div
-      className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-blue-900 to-blue-500/5 rounded-2xl"
-      animate={{ rotate: [0, 6, 0] }}
-      transition={{
-        duration: 6,
-        repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut",
-      }}
-    />
-    <motion.div
-      className="relative bg-white border border-gray-200 p-4 sm:p-6 rounded-2xl shadow-sm"
-      whileHover={{
-        y: -5,
-        boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-      }}
-      transition={{ duration: 0.2 }}
-    >
-      <div className="flex justify-between items-center mb-6">
-        <div className="flex space-x-2">
-          <motion.div
-            className="w-3 h-3 rounded-full bg-red-500"
-            whileHover={{ scale: 1.2 }}
-          />
-          <motion.div
-            className="w-3 h-3 rounded-full bg-yellow-500"
-            whileHover={{ scale: 1.2 }}
-          />
-          <motion.div
-            className="w-3 h-3 rounded-full bg-green-500"
-            whileHover={{ scale: 1.2 }}
-          />
-        </div>
-        <div className="text-xs md:text-sm text-gray-500">developer.js</div>
-      </div>
+              {/* Developer.js card for mobile */}
+              <div className="font-inter">
+                <motion.div
+                  className="w-full max-w-[95vw] flex justify-center items-center px-4 md:px-6 py-6 md:py-10"
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 1.2,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
+                >
+                  <div className="relative">
+                    {/* Animated background gradient */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-br from-blue-400/25 via-blue-900 to-blue-400/10 rounded-2xl"
+                      animate={{ rotate: [0, 6, 0] }}
+                      transition={{
+                        duration: 6,
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                        ease: "easeInOut",
+                      }}
+                    />
+                    {/* Card content */}
+                    <motion.div
+                      className={`relative ${cardColors.bg} border ${cardColors.border} p-4 sm:p-6 rounded-2xl shadow-md`}
+                      whileHover={{
+                        y: -5,
+                        boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)",
+                      }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {/* Header */}
+                      <div className="flex justify-between items-center mb-6">
+                        <div className="flex space-x-2">
+                          <motion.div
+                            className="w-3 h-3 rounded-full bg-red-500"
+                            whileHover={{ scale: 1.2 }}
+                          />
+                          <motion.div
+                            className="w-3 h-3 rounded-full bg-yellow-400"
+                            whileHover={{ scale: 1.2 }}
+                          />
+                          <motion.div
+                            className="w-3 h-3 rounded-full bg-green-500"
+                            whileHover={{ scale: 1.2 }}
+                          />
+                        </div>
+                        <div
+                          className={`text-xs md:text-sm ${cardColors.text}`}
+                        >
+                          developer.js
+                        </div>
+                      </div>
 
-      <div className="space-y-2 font-mono text-sm md:text-base overflow-x-auto whitespace-nowrap sm:whitespace-normal">
-        <div className="text-gray-500 flex justify-start">
-          {"// Software Engineer"}
-        </div>
-        <div className="flex justify-start">
-          <span className="text-pink-600">const</span>{" "}
-          <span className="text-blue-600">developer</span>{" "}
-          <span className="text-gray-500">=</span>{" "}
-          <span className="text-orange-500">{"{"}</span>
-        </div>
-
-        <motion.div
-          className="pl-6 flex justify-start"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1.4, duration: 0.3 }}
-        >
-          <span className="text-purple-600">name</span>
-          <span className="text-gray-500">:</span>{" "}
-          <span className="text-green-600">'Abhiraj Verma'</span>
-          <span className="text-gray-500">,</span>
-        </motion.div>
-
-        <motion.div
-          className="pl-6 flex justify-start flex-wrap gap-x-1"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1.6, duration: 0.3 }}
-        >
-          <span className="text-purple-600">skills</span>
-          <span className="text-gray-500">:</span>{" "}
-          <span className="text-orange-500">[</span>
-          <span className="text-green-600">'JavaScript'</span>
-          <span className="text-gray-500">,</span>{" "}
-          <span className="text-green-600">'React.js'</span>
-          <span className="text-gray-500">,</span>{" "}
-          <span className="text-green-600">'Node.js'</span>
-          <span className="text-gray-500">,</span>
-          <span className="text-green-600">'MongoDB'</span>
-          <span className="text-gray-500">,</span>{" "}
-          <span className="text-green-600">'MySQL'</span>
-          <span className="text-orange-500">]</span>
-          <span className="text-gray-500">,</span>
-        </motion.div>
-
-        <motion.div
-          className="pl-6 flex justify-start"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1.8, duration: 0.3 }}
-        >
-          <span className="text-purple-600">focuses</span>
-          <span className="text-gray-500">:</span>{" "}
-          <span className="text-orange-500">[</span>
-          <span className="text-green-600">'Full-Stack'</span>
-          <span className="text-orange-500">]</span>
-          <span className="text-gray-500">,</span>
-        </motion.div>
-
-        <motion.div
-          className="pl-6 flex justify-start"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 2.0, duration: 0.3 }}
-        >
-          <span className="text-purple-600">learning</span>
-          <span className="text-gray-500">:</span>{" "}
-          <span className="text-green-600">'Always'</span>
-        </motion.div>
-
-        <div className="flex justify-start">
-          <span className="text-orange-500">{"}"}</span>
-          <span className="text-gray-500">;</span>
-        </div>
-      </div>
-    </motion.div>
-  </div>
-</motion.div>
-
+                      {/* Code block */}
+                      <div className="space-y-2 font-mono text-sm md:text-base overflow-x-auto whitespace-nowrap sm:whitespace-normal">
+                        <div className="flex justify-start">
+                          <div className={cardColors.text}>
+                            // Software Developer
+                          </div>
+                        </div>
+                        <div className="flex justify-start whitespace-pre">
+                          <span className={cardColors.const}>const </span>
+                          <span className={cardColors.developer}>developer </span>
+                          <span className={cardColors.operator}>= </span>
+                          <span className={cardColors.curly}>{"{"}</span>
+                        </div>
+                        <motion.div
+                          className="pl-6 flex justify-start"
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 1.4, duration: 0.3 }}
+                        >
+                          <span className={cardColors.key}>name</span>
+                          <span className={cardColors.operator}>:</span>{" "}
+                          <span className={cardColors.value}>
+                            'Abhiraj Verma'
+                          </span>
+                          <span className={cardColors.operator}>,</span>
+                        </motion.div>
+                        <motion.div
+                          className="pl-6 flex justify-start flex-wrap gap-x-1"
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 1.6, duration: 0.3 }}
+                        >
+                          <span className={cardColors.key}>skills</span>
+                          <span className={cardColors.operator}>:</span>{" "}
+                          <span className={cardColors.curly}>[</span>
+                          <span className={cardColors.value}>'JavaScript'</span>
+                          <span className={cardColors.operator}>,</span>{" "}
+                          <span className={cardColors.value}>'React.js'</span>
+                          <span className={cardColors.operator}>,</span>{" "}
+                          <span className={cardColors.value}>'Node.js'</span>
+                          <span className={cardColors.operator}>,</span>{" "}
+                          <span className={cardColors.value}>'Express.js'</span>
+                          <span className={cardColors.operator}>,</span>{" "}
+                          <span className={cardColors.value}>'MongoDB'</span>
+                          <span className={cardColors.operator}>,</span>{" "}
+                          <span className={cardColors.value}>'MySQL'</span>
+                          <span className={cardColors.curly}>]</span>
+                          <span className={cardColors.operator}>,</span>
+                        </motion.div>
+                        <motion.div
+                          className="pl-6 flex justify-start"
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 1.8, duration: 0.3 }}
+                        >
+                          <span className={cardColors.key}>focuses</span>
+                          <span className={cardColors.operator}>:</span>{" "}
+                          <span className={cardColors.curly}>[</span>
+                          <span className={cardColors.value}>'Full-Stack'</span>
+                          <span className={cardColors.curly}>]</span>
+                          <span className={cardColors.operator}>,</span>
+                        </motion.div>
+                        <motion.div
+                          className="pl-6 flex justify-start"
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 2.0, duration: 0.3 }}
+                        >
+                          <span className={cardColors.key}>learning</span>
+                          <span className={cardColors.operator}>:</span>{" "}
+                          <span className={cardColors.value}>'Always'</span>
+                        </motion.div>
+                        <div className="flex justify-start">
+                          <span className={cardColors.curly}>{"}"}</span>
+                          <span className={cardColors.operator}>;</span>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
 
-          {/* Desktop Layout - Split  */}
-          <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
-            {/* Left Column - Content  */}
+          {/* Desktop Layout - Split */}
+          <div className="hidden lg:grid lg:grid-cols-2 lg:gap-36 lg:items-center">
+            {/* Left Column - Content */}
             <motion.div
               initial="hidden"
               animate="visible"
@@ -368,7 +386,7 @@ const HeroSection = () => {
                 technologies and thoughtful user experiences.
               </motion.p>
 
-              {/* CTA Buttons - Desktop  */}
+              {/* CTA Buttons - Desktop */}
               <motion.div variants={itemVariants} className="flex gap-6 mb-8">
                 <motion.button
                   whileHover={{ y: -2 }}
@@ -402,7 +420,7 @@ const HeroSection = () => {
                 </motion.a>
               </motion.div>
 
-              {/* Social Links - Desktop  */}
+              {/* Social Links - Desktop */}
               <motion.div
                 variants={itemVariants}
                 className="flex space-x-6 mb-12"
@@ -433,7 +451,7 @@ const HeroSection = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right Column  */}
+            {/* Right Column */}
             <motion.div
               className="w-full max-w-md px-4 sm:px-0"
               initial={{ opacity: 0, x: 50 }}
@@ -512,12 +530,14 @@ const HeroSection = () => {
 
                 {/* Developer Card */}
                 <motion.div
-                  className="relative bg-white border border-gray-200 p-4 sm:p-6 rounded-2xl shadow-sm z-10"
+                  className={`relative ${cardColors.bg} border ${cardColors.border} p-4 sm:p-6 rounded-2xl shadow-sm z-10`}
                   role="region"
                   aria-label="Developer code card"
                   whileHover={{
                     y: -5,
-                    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
+                    boxShadow: isDarkMode
+                      ? "0 10px 25px -5px rgba(0, 0, 0, 0.3)"
+                      : "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                   }}
                   transition={{ duration: 0.2 }}
                 >
@@ -541,12 +561,12 @@ const HeroSection = () => {
 
                   {/* Code Lines */}
                   <div className="space-y-2 font-mono text-[10px] sm:text-sm">
-                    <div className="text-gray-500">// Software Engineer</div>
+                    <div className={cardColors.text}>// Software Developer</div>
                     <div>
-                      <span className="text-pink-600">const</span>{" "}
-                      <span className="text-blue-600">developer</span>{" "}
-                      <span className="text-gray-500">=</span>{" "}
-                      <span className="text-orange-500">{"{"}</span>
+                      <span className={cardColors.const}>const</span>{" "}
+                      <span className={cardColors.developer}>developer</span>{" "}
+                      <span className={cardColors.operator}>=</span>{" "}
+                      <span className={cardColors.curly}>{"{"}</span>
                     </div>
 
                     <motion.div
@@ -555,10 +575,10 @@ const HeroSection = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 1.4, duration: 0.3 }}
                     >
-                      <span className="text-purple-600">name</span>
-                      <span className="text-gray-500">:</span>{" "}
-                      <span className="text-green-600">'Abhiraj Verma'</span>
-                      <span className="text-gray-500">,</span>
+                      <span className={cardColors.key}>name</span>
+                      <span className={cardColors.operator}>:</span>{" "}
+                      <span className={cardColors.value}>'Abhiraj Verma'</span>
+                      <span className={cardColors.operator}>,</span>
                     </motion.div>
 
                     <motion.div
@@ -567,20 +587,24 @@ const HeroSection = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 1.6, duration: 0.3 }}
                     >
-                      <span className="text-purple-600">skills</span>
-                      <span className="text-gray-500">:</span>{" "}
-                      <span className="text-orange-500">[</span>
-                      <span className="text-green-600">'JavaScript'</span>
-                      <span className="text-gray-500">,</span>{" "}
-                      <span className="text-green-600">'React.js'</span>
-                      <span className="text-gray-500">,</span>{" "}
-                      <span className="text-green-600">'Node.js'</span>
-                      <span className="text-gray-500">,</span> <br />{" "}
-                      <span className="text-green-600 ml-16">'MongoDB'</span>
-                      <span className="text-gray-500">,</span>{" "}
-                      <span className="text-green-600">'MySQL'</span>
-                      <span className="text-orange-500">]</span>
-                      <span className="text-gray-500">,</span>
+                      <span className={cardColors.key}>skills</span>
+                      <span className={cardColors.operator}>:</span>{" "}
+                      <span className={cardColors.curly}>[</span>
+                      <span className={cardColors.value}>'JavaScript'</span>
+                      <span className={cardColors.operator}>,</span>{" "}
+                      <span className={cardColors.value}>'React.js'</span>
+                      <span className={cardColors.operator}>,</span>{" "}
+                      <span className={cardColors.value}>'Node.js'</span>
+                      <span className={cardColors.operator}>,</span> <br />{" "}
+                      <span className={`${cardColors.value} ml-16`}>
+                        'Express.js'
+                      </span>
+                      <span className={cardColors.operator}>,</span>{" "}
+                      <span className={cardColors.value}>'MongoDB'</span>
+                      <span className={cardColors.operator}>,</span>{" "}
+                      <span className={cardColors.value}>'MySQL'</span>
+                      <span className={cardColors.curly}>]</span>
+                      <span className={cardColors.operator}>,</span>
                     </motion.div>
 
                     <motion.div
@@ -589,12 +613,12 @@ const HeroSection = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 1.8, duration: 0.3 }}
                     >
-                      <span className="text-purple-600">focuses</span>
-                      <span className="text-gray-500">:</span>{" "}
-                      <span className="text-orange-500">[</span>
-                      <span className="text-green-600">'Full-Stack'</span>
-                      <span className="text-orange-500">]</span>
-                      <span className="text-gray-500">,</span>
+                      <span className={cardColors.key}>focuses</span>
+                      <span className={cardColors.operator}>:</span>{" "}
+                      <span className={cardColors.curly}>[</span>
+                      <span className={cardColors.value}>'Full-Stack'</span>
+                      <span className={cardColors.curly}>]</span>
+                      <span className={cardColors.operator}>,</span>
                     </motion.div>
 
                     <motion.div
@@ -603,14 +627,14 @@ const HeroSection = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2.0, duration: 0.3 }}
                     >
-                      <span className="text-purple-600">learning</span>
-                      <span className="text-gray-500">:</span>{" "}
-                      <span className="text-green-600">'Always'</span>
+                      <span className={cardColors.key}>learning</span>
+                      <span className={cardColors.operator}>:</span>{" "}
+                      <span className={cardColors.value}>'Always'</span>
                     </motion.div>
 
                     <div>
-                      <span className="text-orange-500">{"}"}</span>
-                      <span className="text-gray-500">;</span>
+                      <span className={cardColors.curly}>{"}"}</span>
+                      <span className={cardColors.operator}>;</span>
                     </div>
                   </div>
                 </motion.div>
@@ -640,7 +664,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator  */}
+        {/* Scroll Indicator */}
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
