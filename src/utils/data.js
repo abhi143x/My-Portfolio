@@ -16,7 +16,7 @@ import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 import PROJECT_IMG_1 from "../assets/images/ems.jpg";
 import PROJECT_IMG_2 from "../assets/images/weather.jpg";
-import PROJECT_IMG_3 from "../assets/images/signUp.jpg";
+import PROJECT_IMG_3 from "../assets/images/signUP.jpg";
 import PROJECT_IMG_4 from "../assets/images/todo.jpg";
 // import { color, number } from "framer-motion";
 
