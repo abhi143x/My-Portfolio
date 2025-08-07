@@ -5,7 +5,7 @@ import { Mail, Heart, ArrowUp, Code2 } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
 
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
-import { containerVariants, itemVariants } from "../../utils/helper.cjs";
+import { containerVariants, itemVariants } from "../../utils/helper.js";
 
 const Footer = () => {
   const { isDarkMode } = useTheme();

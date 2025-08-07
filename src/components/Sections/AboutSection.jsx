@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useTheme } from "../../context/ThemeContext";
-import { JOURNEY_STEPS, PASSIONS } from "../../utils/data.cjs";
+import { JOURNEY_STEPS, PASSIONS } from "../../utils/data.js";
 
 import SIGNATURE from "../../assets/images/sign.svg";
 import PROFILE_PIC from "../../assets/images/img.jpg";
-import { containerVariants, itemVariants } from "../../utils/helper.cjs";
+import { containerVariants, itemVariants } from "../../utils/helper.js";
 
 const AboutSection = () => {
   const { isDarkMode } = useTheme();

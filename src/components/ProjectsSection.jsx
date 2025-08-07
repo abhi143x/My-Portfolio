@@ -4,9 +4,9 @@ import { motion, useInView } from "framer-motion";
 import { ArrowUpRight, Code2, Globe, Zap, Users } from "lucide-react";
 
 import { useTheme } from "../context/ThemeContext";
-import { PROJECTS } from "../utils/data.cjs";
+import { PROJECTS } from "../utils/data.js";
 import ProjectCard from "./ProjectCard";
-import { containerVariants, itemVariants } from "../utils/helper.cjs";
+import { containerVariants, itemVariants } from "../utils/helper.js";
 
 const ProjectsSection = () => {
   const { isDarkMode } = useTheme();

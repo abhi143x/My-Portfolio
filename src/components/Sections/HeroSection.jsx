@@ -4,7 +4,7 @@ import { ArrowDown, Mail } from "lucide-react";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { useTheme } from "../../context/ThemeContext";
 
-import { containerVariants, itemVariants } from "../../utils/helper.cjs";
+import { containerVariants, itemVariants } from "../../utils/helper.js";
 
 const HeroSection = () => {
   const { isDarkMode } = useTheme();

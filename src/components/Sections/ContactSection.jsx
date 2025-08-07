@@ -8,8 +8,8 @@ import {
 } from "framer-motion";
 import { Send } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
-import { CONTACT_INFO, SOCIAL_LINKS } from '../../utils/data.cjs';
-import { containerVariants, itemVariants } from '../../utils/helper.cjs';
+import { CONTACT_INFO, SOCIAL_LINKS } from '../../utils/data.js';
+import { containerVariants, itemVariants } from '../../utils/helper.js';
 import TextInput from '../Input/TextInput';
 import SuccessModel from '../SuccessModal';
 
