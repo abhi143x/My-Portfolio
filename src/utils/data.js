@@ -123,7 +123,7 @@ export const PROJECTS = [
       "Developed a full-stack SignUp system using React.js, Node.js & Express.js, and MySQL.",
     image: PROJECT_IMG_3,
     tags: ["React", "CSS", "Node.js", "Express.js", "MySQL"],
-    liveUrl: "#",
+    liveUrl: "https://signup-form-ui.onrender.com",
     githubUrl: "https://github.com/abhi143x/Signup_form",
     featured: true,
     category: "Web Application",
