@@ -6,7 +6,7 @@
 
 • Integrated Framer Motion to add subtle animations and enhance user engagement through smooth transitions and interactive elements.
 
-• Structured reusable components for sections like About, Projects, Skills, Contact, and Hero, improving code scalability and maintainability.
+• Structured reusable components for sections like About, Projects, Skills, Contact, and Hero, improving code scalability and  maintainability.
 
 • Implemented Dark/Light Theme Toggle using React Context API to provide a personalized user experience.
 
