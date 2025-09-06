@@ -21,8 +21,8 @@ import PROJECT_IMG_4 from "../assets/images/weather.jpg";
 import PROJECT_IMG_5 from "../assets/images/signUp.jpg";
 import PROJECT_IMG_6 from "../assets/images/todo.jpg";
 
-import CERTIFICATE_IMG_1 from "../assets/images/Rays-Mern-cert.jpeg";
-import CERTIFICATE_IMG_2 from "../assets/images/Hack2skill-certificate.png";
+import CERTIFICATE_IMG_1 from "../assets/images/Rays-Mern-Cert.jpeg";
+import CERTIFICATE_IMG_2 from "../assets/images/Hack2skill-Certificate.png";
 import CERTIFICATE_IMG_3 from "../assets/images/GEN-AI.jpg";
 import CERTIFICATE_IMG_4 from "../assets/images/Job-deloitee.jpg";
 import CERTIFICATE_IMG_5 from "../assets/images/SQL-Bootcamp.jpg";
