@@ -21,6 +21,12 @@ import PROJECT_IMG_4 from "../assets/images/weather.jpg";
 import PROJECT_IMG_5 from "../assets/images/signUp.jpg";
 import PROJECT_IMG_6 from "../assets/images/todo.jpg";
 
+import CERTIFICATE_IMG_1 from "../assets/images/Rays-Mern-cert.jpeg";
+import CERTIFICATE_IMG_2 from "../assets/images/Hack2skill-certificate.png";
+import CERTIFICATE_IMG_3 from "../assets/images/GEN-AI.jpg";
+import CERTIFICATE_IMG_4 from "../assets/images/Job-deloitee.jpg";
+import CERTIFICATE_IMG_5 from "../assets/images/SQL-Bootcamp.jpg";
+
 export const SKILLS_CATEGORY = [
   {
     title: "Frontend",
@@ -168,6 +174,55 @@ export const PROJECTS = [
     category: "Web Application",
   },
 ];
+
+export const CERTIFICATES = [
+  {
+    id: 1,
+    title: "Full Stack Web Development in MERN",
+    issuer: "Rays Edutech PVT Ltd.",
+    image: CERTIFICATE_IMG_1,
+    credentialUrl: "https://drive.google.com/file/d/1azAinfzruhe9MipRt_iETVuVZR3Kmr5H/view?usp=sharing",
+    description:
+      "Completed a comprehensive Full Stack Web Development course covering HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB and MySQL.",
+  },
+  {
+    id: 2,
+    title: "Google Developer Group on Campus Solution Challenge",
+    issuer: "Hack2Skill",
+    image: CERTIFICATE_IMG_2,
+    credentialUrl: "https://drive.google.com/file/d/1OGtW-6GOJW_dAHn1J7hddSyobaTelqDu/view?usp=sharing",
+    description:
+      "Participated in the Google Developer Group on Campus Solution Challenge, focusing on innovative solutions for campus issues.",
+  },
+  {
+    id: 3,
+    title: "Introduction to Generative AI powered by Google Cloud",
+    issuer: "Simplilearn SkillUp",
+    image: CERTIFICATE_IMG_3,
+    credentialUrl: "https://drive.google.com/file/d/15QFXsXC_6bLbfBMd4rlHy0cA1wWFL5Ux/view?usp=sharing",
+    description:
+      "Completed a course on Generative AI, focusing on its applications and implications in various fields.",
+  },
+  {
+    id: 4,
+    title: "Technology Job Simulation - Deloitte",
+    issuer: "Forage",
+    image: CERTIFICATE_IMG_4,
+    credentialUrl: "https://drive.google.com/file/d/1dGzHbn3mUU1wEluSw0AXx9wX4xLCjriw/view?usp=sharing",
+    description:
+      "Completed a job simulation program with Deloitte, gaining insights into the technology consulting industry.",
+  },
+  {
+    id: 5,
+    title: "SQL Bootcamp in collaboration with National Skill Development Corporation",
+    issuer: "Lets Upgrade",
+    image: CERTIFICATE_IMG_5,
+    credentialUrl: "https://drive.google.com/file/d/1NP8VCcC9jd4mcaqlXA9C5Fe2q1HceBZh/view?usp=sharing",
+    description:
+      "Completed a SQL Bootcamp, gaining hands-on experience in database management and SQL querying.",
+  },
+];
+
 
 export const JOURNEY_STEPS = [
   {

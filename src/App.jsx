@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/Sections/HeroSection";
 import SkillsSection from "./components/Sections/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
+import CertificatesSection from "./components/CertificatesSection";
 import AboutSection from "./components/Sections/AboutSection";
 import ContactSection from "./components/Sections/ContactSection";
 import Footer from "./components/Sections/Footer";
@@ -16,6 +17,8 @@ const App = () => {
         <HeroSection />
         <SkillsSection />
         <ProjectsSection />
+        {/* <CertificatesSection /> */}
+        <CertificatesSection />
         <AboutSection />
         <ContactSection />
         <Footer />
