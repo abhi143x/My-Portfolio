@@ -161,7 +161,7 @@ const HeroSection = () => {
                 <motion.a
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  href="/resume.pdf"
+                  href="/AbhirajVerma_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 inline-block text-center"
@@ -411,7 +411,7 @@ const HeroSection = () => {
                 <motion.a
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  href="/resume.pdf"
+                  href="/AbhirajVerma_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 inline-block text-center"

@@ -15,9 +15,11 @@ import {
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 import PROJECT_IMG_1 from "../assets/images/ems.jpg";
-import PROJECT_IMG_2 from "../assets/images/weather.jpg";
-import PROJECT_IMG_3 from "../assets/images/signUp.jpg";
-import PROJECT_IMG_4 from "../assets/images/todo.jpg";
+import PROJECT_IMG_2 from "../assets/images/port.png";
+import PROJECT_IMG_3 from "../assets/images/food.png";
+import PROJECT_IMG_4 from "../assets/images/weather.jpg";
+import PROJECT_IMG_5 from "../assets/images/signUp.jpg";
+import PROJECT_IMG_6 from "../assets/images/todo.jpg";
 
 export const SKILLS_CATEGORY = [
   {
@@ -107,34 +109,58 @@ export const PROJECTS = [
   },
   {
     id: 2,
-    title: "Weather App",
+    title: "Portfolio Website",
     description:
-      "Developed a Weather App using React JS. Here we will get the current Weather data from OpenWeatherMap API and display the weather data like Temperature,  Weather condition, Humidity and Wind Speed according to the city.",
+      "Developed a Portfolio Website using React.js . Showcasing my projects, skills, and experiences.",
     image: PROJECT_IMG_2,
-    tags: ["React", "CSS", "Open Source API"],
-    liveUrl: "https://weather-app-khaki-nine-13.vercel.app",
-    githubUrl: "https://github.com/abhi143x/weather-app",
-    featured: true,
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "https://abhiraj-verma-portfolio.vercel.app/",
+    githubUrl: "https://github.com/abhi143x/My-Portfolio",
+    featured: false,
     category: "Web Application",
   },
   {
     id: 3,
-    title: "Sign Up Form",
+    title: "Food Delivery",
     description:
-      "Developed a full-stack SignUp system using React.js, Node.js & Express.js, and MySQL.",
+      "Developed a dynamic Food Delivery App using React.js for food ordering and CSS for responsive UI design.",
     image: PROJECT_IMG_3,
-    tags: ["React", "CSS", "Node.js", "Express.js", "MySQL"],
-    liveUrl: "https://signup-form-ui.onrender.com",
-    githubUrl: "https://github.com/abhi143x/Signup_form",
-    featured: true,
+    tags: ["React", "CSS", "React Router","Context API"],
+    liveUrl: "https://food-delivery-red-three.vercel.app/",
+    githubUrl: "https://github.com/abhi143x/Food-Delivery",
+    featured: false,
     category: "Web Application",
   },
   {
     id: 4,
+    title: "Weather App",
+    description:
+      "Developed a Weather App using React JS. Here we will get the current Weather data from OpenWeatherMap API and display the weather data like Temperature,  Weather condition, Humidity and Wind Speed according to the city.",
+    image: PROJECT_IMG_4,
+    tags: ["React", "CSS", "Open Source API"],
+    liveUrl: "https://weather-app-khaki-nine-13.vercel.app",
+    githubUrl: "https://github.com/abhi143x/weather-app",
+    featured: false,
+    category: "Web Application",
+  },
+  {
+    id: 5,
+    title: "Sign Up Form",
+    description:
+      "Developed a full-stack SignUp system using React.js, Node.js & Express.js, and MySQL.",
+    image: PROJECT_IMG_5,
+    tags: ["React", "CSS", "Node.js", "Express.js", "MySQL"],
+    liveUrl: "https://signup-form-ui.onrender.com",
+    githubUrl: "https://github.com/abhi143x/Signup_form",
+    featured: false,
+    category: "Web Application",
+  },
+  {
+    id: 6,
     title: "TO-DO List",
     description:
       "Developed a dynamic To-Do List web application using React.js for state management and CSS for responsive UI design.",
-    image: PROJECT_IMG_4,
+    image: PROJECT_IMG_6,
     tags: ["React", "CSS"],
     liveUrl: "https://to-do-list-one-theta-35.vercel.app/",
     githubUrl: "https://github.com/abhi143x/To-Do-List",
