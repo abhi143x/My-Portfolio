@@ -21,7 +21,7 @@ import PROJECT_IMG_4 from "../assets/images/weather.jpg";
 import PROJECT_IMG_5 from "../assets/images/signUp.jpg";
 import PROJECT_IMG_6 from "../assets/images/todo.jpg";
 
-import CERTIFICATE_IMG_1 from "../assets/images/Rays-Mern-Cert.png";
+import CERTIFICATE_IMG_1 from "../assets/images/Rays-Mern-Cert.jpg";
 import CERTIFICATE_IMG_2 from "../assets/images/Hack2skill-Certificate.png";
 import CERTIFICATE_IMG_3 from "../assets/images/GEN-AI.jpg";
 import CERTIFICATE_IMG_4 from "../assets/images/Job-deloitee.jpg";
@@ -181,7 +181,7 @@ export const CERTIFICATES = [
     title: "Full Stack Web Development in MERN",
     issuer: "Rays Edutech PVT Ltd.",
     image: CERTIFICATE_IMG_1,
-    credentialUrl: "https://drive.google.com/file/d/1azAinfzruhe9MipRt_iETVuVZR3Kmr5H/view?usp=sharing",
+    credentialUrl: "https://drive.google.com/file/d/1SG9L7FwDgzy5RYrzp_5IMEgo-EgDyLp3/view?usp=sharing",
     description:
       "Completed a comprehensive Full Stack Web Development course covering HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB and MySQL.",
   },
