@@ -235,7 +235,7 @@ export const JOURNEY_STEPS = [
     color: "bg-blue-500",
   },
   {
-    year: "2024",
+    year: "2025",
     title: "First Internship",
     company: "Rays Edutech PVT Ltd.",
     description:

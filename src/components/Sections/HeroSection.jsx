@@ -19,6 +19,10 @@ const HeroSection = () => {
     }
   };
 
+  const handleResumeClick = () => {
+    window.alert("Resume download is under process.");
+  };
+
   const textVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -158,16 +162,14 @@ const HeroSection = () => {
                 >
                   Get in Touch
                 </motion.button>
-                <motion.a
+                <motion.button
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  href="/AbhirajVerma_CV.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={handleResumeClick}
                   className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 inline-block text-center"
                 >
                   VIEW RESUME
-                </motion.a>
+                </motion.button>
               </motion.div>
 
               {/* Social Links - Mobile */}
@@ -266,7 +268,9 @@ const HeroSection = () => {
                         </div>
                         <div className="flex justify-start whitespace-pre">
                           <span className={cardColors.const}>const </span>
-                          <span className={cardColors.developer}>developer </span>
+                          <span className={cardColors.developer}>
+                            developer{" "}
+                          </span>
                           <span className={cardColors.operator}>= </span>
                           <span className={cardColors.curly}>{"{"}</span>
                         </div>
@@ -408,16 +412,14 @@ const HeroSection = () => {
                 >
                   Get in Touch
                 </motion.button>
-                <motion.a
+                <motion.button
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  href="/AbhirajVerma_CV.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 inline-block text-center"
+                  onClick={handleResumeClick}
+                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 inline-block text-center cursor-pointer"
                 >
                   VIEW RESUME
-                </motion.a>
+                </motion.button>
               </motion.div>
 
               {/* Social Links - Desktop */}
