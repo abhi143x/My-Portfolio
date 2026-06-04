@@ -9,7 +9,7 @@ A modern, responsive personal portfolio website built with **React 19**, **Tailw
 [![Vite](https://img.shields.io/badge/Vite-7.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-FF0055?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-🔗 **[Live Demo](https://abhiraj-verma-portfolio.vercel.app/)**
+🔗 **[Live - https://abhiraj-verma-portfolio.vercel.app/](https://abhiraj-verma-portfolio.vercel.app/)**
 
 </div>
 
@@ -169,14 +169,6 @@ npm run build
 - 🌐 Portfolio — [abhiraj-verma-portfolio.vercel.app](https://abhiraj-verma-portfolio.vercel.app/)
 - 💼 LinkedIn — [Abhiraj Verma](https://www.linkedin.com/in/abhiraj-verma-249765334/)
 - 🐙 GitHub — [@abhi143x](https://github.com/abhi143x)
-- 📧 Email — [iiabhirajverma35@gmail.com](mailto:iiabhirajverma35@gmail.com)
+- 📧 Email — [iabhirajverma35@gmail.com](mailto:iabhirajverma35@gmail.com)
 
 ---
-
-<div align="center">
-
-**⭐ If you found this project helpful, please give it a star!**
-
-Made with ❤️ by Abhiraj Verma
-
-</div>
